@@ -28,7 +28,7 @@ class Billplz
 
 	public function useSsl($flag = true)
 	{
-		$this->useSsl = $flag;
+		$this->use_ssl = $flag;
 	}
 
 	protected function curlInit()
@@ -39,7 +39,7 @@ class Billplz
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_USERPWD, $this->secret_key . ':');
 
-		if ($this->useSsl === false) {
+		if ($this->use_ssl === false) {
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 		}
