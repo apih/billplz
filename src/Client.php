@@ -181,5 +181,11 @@ class Client
 	{
 		return $this->curlDeleteRequest(__FUNCTION__, 'bills/' . $bill_id);
 	}
+
+	// FPX Banks
+	public function getFpxBanks()
+	{
+		return $this->curlGetRequest(__FUNCTION__, 'fpx_banks');
+	}
 }
 ?>
